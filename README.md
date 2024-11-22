@@ -1,1 +1,5 @@
-Particle Cloth Sim
+# Raylib C++ Starter Template
+
+Raylib C++ Starter Template for Visual Studio Code on Windows.
+
+
