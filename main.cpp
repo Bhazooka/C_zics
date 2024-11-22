@@ -120,3 +120,16 @@ int main() {
     CloseWindow();
     return 0;
 }
+
+
+
+
+
+/*
+TODO:
+    - Toggle gravity On/Off  (PRESS G) -> objects in motion must continue with their direction when grave off
+    - Mouse repelant, Press button to make the moouse a repelant to all the particles
+    - Mouse attraction
+    - Restart the simulation (PRESS R)
+    - Add control labels
+*/
