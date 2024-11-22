@@ -17,6 +17,14 @@ public:
         }
     }
 
+
+    static void tear_cloth(float mouse_x, float mouse_y, const std::vector<Particle>& particles, std::vector<Constraint>& constraints) {
+        Constraint* nearest = find_nearest_constraint(mouse_x, mouse_y, constraints);
+        if (nearest) {
+            nearest->deactivate();
+        }
+    }
+
 private:
     static float point_to_segment_distance(float px, float py, float x1, float y1, float x2, float y2) {
         float ABx = x2 - x1;
@@ -59,12 +67,6 @@ private:
         return nearest_constraint;
     }
 
-    static void tear_cloth(float mouse_x, float mouse_y, const std::vector<Particle>& particles, std::vector<Constraint>& constraints) {
-        Constraint* nearest = find_nearest_constraint(mouse_x, mouse_y, constraints);
-        if (nearest) {
-            nearest->deactivate();
-        }
-    }
 };
 
 #endif // INPUT_HANDLER_H
